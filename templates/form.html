@@ -1,0 +1,30 @@
+
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>Enter your Madlib words!</h1>
+
+    <form action="/madlib">
+        {% for word in my_Story %}
+            <p>{{word}}: 
+                <input type="text" name="{{word}}">
+            </p>
+
+            <!-- <p>noun:
+                <input type="text" name="noun">
+            </p>
+            <p>verb:
+                <input type="text" name="verb">
+            </p>
+            <p>adjective:
+                <input type="text" name="adjective">
+            </p>
+            <p>plural_noun:
+                <input type="text" name="plural_noun">
+            </p> -->
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+    {% endblock %}
+
+
